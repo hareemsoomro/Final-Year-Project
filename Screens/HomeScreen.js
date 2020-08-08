@@ -4,7 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 export default function HomeScreen({ navigation }) {
   return (
       <View style={styles.body}>
-        <View style={styles.heading}><Text style={styles.text}>Select Your Visit</Text></View> 
+        <View style={styles.heading}><Text style={styles.text}>Select  Visit</Text></View> 
         <ScrollView>
           {/* first row */}
         <View style={styles.container}>
