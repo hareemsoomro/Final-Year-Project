@@ -58,7 +58,7 @@ export default function SignInScreen({ navigation }) {
   return (
 
       <View style={styles.container}>
-                  <StatusBar backgroundColor='#009387' barStyle="light-content"/>
+                  <StatusBar backgroundColor='#43a047' barStyle="light-content"/>
 
         <View style={styles.header}>
           <Text style={styles.text_header}>Register Now ! !</Text>
@@ -149,8 +149,8 @@ const styles = StyleSheet.create({
   action: {
       flexDirection: 'row',
       marginTop: 10,
-      borderBottomWidth: 1,
-      borderBottomColor: '#f2f2f2',
+      borderBottomWidth: 2,
+      borderBottomColor: '#424242',
       paddingBottom: 5
   },
   actionError: {

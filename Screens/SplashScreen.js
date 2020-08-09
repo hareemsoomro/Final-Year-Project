@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet,Button,Image, TouchableOpacity, Text, View ,Dimensions} from 'react-native';
+import { StyleSheet,Button,Image, StatusBar,TouchableOpacity, Text, View ,Dimensions} from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import * as Animatable from 'react-native-animatable';
 
@@ -7,15 +7,16 @@ export default function SplashScreen({ navigation }) {
   return (
 
       <View style={styles.container}>
+        <StatusBar backgroundColor='#43a047' barStyle="light-content"/>
           <View style={styles.header}>
+            
               <Animatable.Image animation="bounceInDown"
                 duraton="1500"
-
                source={require('../assets/logo.png')}
                style={styles.logo}
                resizeMode="stretch"
-   
                 />
+                <Text style={styles.title}>E-VACCINE</Text>
           </View>
           <Animatable.View animation="fadeInUpBig"
            style={styles.footer}>

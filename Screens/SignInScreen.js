@@ -83,7 +83,7 @@ export default function SignInScreen({ navigation }) {
           </View>
           <View>
           <TouchableOpacity>
-                <Text style={{color: '#009387', marginTop:15}}>Forgot password?</Text>
+                <Text style={{color: '#43a047', marginTop:15}}>Forgot password? Clicl Here.</Text>
             </TouchableOpacity>
 
           <TouchableOpacity onPress={()=>{loginHandle(data.username,data.password)}} 
@@ -93,7 +93,7 @@ export default function SignInScreen({ navigation }) {
               </TouchableOpacity>
               <TouchableOpacity onPress={()=>navigation.navigate('SignUpScreen')} 
               style={styles.textSign} >
-                      <Text style={styles.signIn}>Sign UP </Text>  
+                      <Text style={styles.signIn}>Sign Up </Text>  
               </TouchableOpacity>
 
               </View>
@@ -132,8 +132,8 @@ const styles = StyleSheet.create({
   action: {
       flexDirection: 'row',
       marginTop: 10,
-      borderBottomWidth: 1,
-      borderBottomColor: '#f2f2f2',
+      borderBottomWidth: 2,
+      borderBottomColor: '#424242',
       paddingBottom: 5
   },
   actionError: {
