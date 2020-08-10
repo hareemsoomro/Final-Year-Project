@@ -16,6 +16,8 @@ import SettingScreen from './Screens/SettingScreen';
 import {DrawerContent} from './Screens/DrawerContent';
 import RootStackScreen from './Screens/RootStackScreen';
 import { AuthContext} from './components/Context'
+import AsyncStorage from '@react-native-community/async-storage';
+
 const drawer=createDrawerNavigator();
 
 const App=()=> { 
@@ -58,23 +60,30 @@ const loginReducer = (prevState, action) => {
   }
 };
 const [loginState, dispatch] = React.useReducer(loginReducer, initialLoginState);
-
   const authContext=React.useMemo(()=> ({
-    signIn: (userName,password) => {
-      //setUserToken('random')
-      //setISLoading(false);
-      let userToken;
-      userToken=null;
-      if(userName=='user' && password == 'ps'){
-        userToken='random';
+    signIn: async(foundUser) => {
+      // setUserToken('fgkj');
+      // setIsLoading(false);
+      const userToken = String(foundUser[0].userToken);
+      const userName = foundUser[0].username;
+      
+      try {
+        await AsyncStorage.setItem('userToken', userToken);
+      } catch(e) {
+        console.log(e);
       }
-      dispatch({type: 'LOGIN', id:userName, token:userToken });
+      // console.log('user token: ', userToken);
+      dispatch({ type: 'LOGIN', id: userName, token: userToken });
     },
-    signOut: () => {
-     // setUserToken(null)
-    //  setISLoading(false);
+    signOut: async() => {
+      // setUserToken(null);
+      // setIsLoading(false);
+      try {
+        await AsyncStorage.removeItem('userToken');
+      } catch(e) {
+        console.log(e);
+      }
       dispatch({ type: 'LOGOUT' });
-
     },
     signUp: () => {
     // setUserToken('random')
@@ -82,11 +91,20 @@ const [loginState, dispatch] = React.useReducer(loginReducer, initialLoginState)
     },
   }));
 
-  useEffect(()=> {
-    setTimeout(() => {
-      dispatch({ type: 'RETRIEVE_TOKEN', token: 'random' });
+  useEffect(() => {
+    setTimeout(async() => {
+      // setIsLoading(false);
+      let userToken;
+      userToken = null;
+      try {
+        userToken = await AsyncStorage.getItem('userToken');
+      } catch(e) {
+        console.log(e);
+      }
+      // console.log('user token: ', userToken);
+      dispatch({ type: 'RETRIEVE_TOKEN', token: userToken });
     }, 1000);
-  } , [] );
+  }, []);
   // this is loading screen
   if(loginState.isLoading){
     return(
