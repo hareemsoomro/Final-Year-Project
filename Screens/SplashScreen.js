@@ -30,8 +30,8 @@ export default function SplashScreen({ navigation }) {
                         color="#fff"
                         size={20}
                     />
-              </TouchableOpacity>
-
+              </TouchableOpacity> 
+ 
           </Animatable.View>
       </View>
   );

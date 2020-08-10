@@ -35,7 +35,9 @@ export default function Booking({ navigation }) {
           </View>
           {/*============= contact ============== */}
           <View style={styles.action}>
-            <TextInput placeholder="Contact No" style={styles.textInput } />
+            <TextInput placeholder="Contact No" style={styles.textInput } 
+            keyboardType="numeric"
+            maxLength={11}/>
           </View>
            {/*============= Address ============== */}
            <View style={styles.action}>
