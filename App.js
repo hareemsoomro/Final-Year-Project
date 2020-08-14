@@ -11,7 +11,7 @@ import ProfileScreen from './Screens/ProfileScreen'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import MainTabScreen from './Screens/MainTabScreen';
 import SupportScreen from './Screens/SupportScreen';
-import BookmarkScreen from './Screens/BookmarkScreen';
+import FAQ from './Screens/FAQ';
 import SettingScreen from './Screens/SettingScreen';
 import {DrawerContent} from './Screens/DrawerContent';
 import RootStackScreen from './Screens/RootStackScreen';
@@ -121,7 +121,7 @@ const [loginState, dispatch] = React.useReducer(loginReducer, initialLoginState)
            <drawer.Screen name="Home" component={MainTabScreen} />
            <drawer.Screen name="Support" component={SupportScreen} />
            <drawer.Screen name="Setting" component={SettingScreen} />
-           <drawer.Screen name="Bookmark" component={BookmarkScreen} /> 
+           <drawer.Screen name="FAQ" component={FAQ} /> 
       </drawer.Navigator>
       ): 
       <RootStackScreen />}

@@ -17,6 +17,7 @@
     "@react-navigation/stack": "^5.2.18",
     "expo": "~37.0.3",
     "link": "^0.1.5",
+    "native-base": "^2.13.13",
     "pod": "^0.9.0",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
@@ -30,7 +31,8 @@
     "react-native-safe-area-context": "0.7.3",
     "react-native-screens": "~2.2.0",
     "react-native-vector-icons": "^6.6.0",
-    "react-native-web": "~0.11.7"
+    "react-native-web": "~0.11.7",
+    "expo-font": "~8.1.0"
   },
   "devDependencies": {
     "babel-preset-expo": "~8.1.0",

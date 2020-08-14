@@ -14,6 +14,7 @@ import FourthVisit from './FourthVisit'
 import FifthVisit from './FifthVisit'
 import SixthVisit from './SixthVisit'
 import Booking from './Booking'
+import FAQ from './FAQ'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import FirstVisit from './FirstVisit';
@@ -87,6 +88,7 @@ const HomeStackScreen =({navigation})=>(
       }}
        />
        <HomeStack.Screen name="Details" component={DetailScreen}/>
+       <HomeStack.Screen name="FAQ" component={FAQ} />
        <HomeStack.Screen name="FirstVisit" component={FirstVisit}/>
        <HomeStack.Screen name="SecondVisit" component={SecondtVisit}/>
        <HomeStack.Screen name="ThirdVisit" component={ThirdtVisit}/>

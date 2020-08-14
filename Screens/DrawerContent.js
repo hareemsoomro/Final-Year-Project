@@ -61,8 +61,8 @@ export function DrawerContent(props){
                 color={color}
                 size={size} />
             ) }
-            label="Bookmarks"
-            onPress={()=>{props.navigation.navigate('Bookmark')}} />
+            label="FAQ"
+            onPress={()=>{props.navigation.navigate('FAQ')}} />
             <DrawerItem 
             icon={({color,size}) => (
                 < Icon name="settings-outline"
