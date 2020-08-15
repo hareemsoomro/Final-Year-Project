@@ -25,7 +25,7 @@ export default function Booking({ navigation }) {
         {label: 'Fourth Visit', value: 'Fourth Visit'},
         {label: 'Fifth Visit', value: 'Fifth Visit'},
         {label: 'Sixth Visit', value: 'Sixth Visit'},
-    ]}
+    ]} 
     defaultIndex={1}
     containerStyle={{height: 40}}/> 
          {/*============= name============== */}
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   action: {
     flexDirection: 'row',
     marginTop: 30,
-    borderBottomWidth: 1,
+    borderBottomWidth: 2,
     borderBottomColor: '#f2f2f2',
     paddingBottom: 5
 },
