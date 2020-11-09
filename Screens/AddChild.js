@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet,Button, Text, View ,TextInput,Image} from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import Swiper from 'react-native-swiper'
 
-export default function AddChild({ navigation }) {
+export default class AddChild extends Component {
+  render(){
   return (
     <View style={styles.container}>
 
@@ -80,7 +81,7 @@ export default function AddChild({ navigation }) {
     
     </View>
   );
-}
+}}
 const styles = StyleSheet.create({
     container: {
       flex: 1, 
