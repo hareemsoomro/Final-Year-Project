@@ -48,7 +48,7 @@ export default function HomeScreen({ navigation }) {
      <View>
        {/*=================row one ====================== */}
        <View style={styles.categoryContainer}>
-         <TouchableOpacity   style={styles.categoryIcon}   onPress={() => navigation.navigate('Booking')} >
+         <TouchableOpacity   style={styles.categoryIcon}   onPress={() => navigation.navigate('AddChild')} >
          < Icon name="account-plus"
                 color='#338a3e'
                 size={50} /> 
@@ -60,7 +60,7 @@ export default function HomeScreen({ navigation }) {
                 size={50} /> 
                 <Text>Booking</Text>
          </TouchableOpacity>
-         <TouchableOpacity  style={styles.categoryIcon}  onPress={() => navigation.navigate('Booking')} >
+         <TouchableOpacity  style={styles.categoryIcon}  onPress={() => navigation.navigate('vaccines')} >
          < Fontisto name="injection-syringe"
                 color='#338a3e'
                 size={50} /> 

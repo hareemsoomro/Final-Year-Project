@@ -65,7 +65,7 @@ export default function Booking({ navigation }) {
 const styles = StyleSheet.create({
     container: {
       flex: 1, 
-    backgroundColor: '#98ee99'
+    backgroundColor: '#c5e1a5'
     },
     buttons:{
         top:10,

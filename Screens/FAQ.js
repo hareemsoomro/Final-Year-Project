@@ -18,13 +18,13 @@ const dataArray = [
 export default function FAQ({ navigation }) {
   return (
     <View style={styles.body} >
-      <View>
+     {/*  <View>
         <Ionicons.Button  name="ios-menu"
           size={32} backgroundColor="#66bb6a"
           onPress={() => navigation.openDrawer()}>
         </Ionicons.Button>
       </View>
-
+ */}
       <View style={styles.container} >
         <StatusBar backgroundColor='#43a047' barStyle="light-content" />
          <Text style={styles.title}>FAQs </Text>
@@ -38,13 +38,14 @@ export default function FAQ({ navigation }) {
 
 
       </View>
-      <View style={styles.buttons}>
+      {/* <View style={styles.buttons}>
         
         <Ionicons.Button name="ios-exit" title="back"
           size={32} backgroundColor="#66bb6a"
           onPress={() => navigation.navigate('Home')}>
         Back</Ionicons.Button>
-      </View></View>
+      </View> */}
+      </View>
   );
 }
 const styles = StyleSheet.create({

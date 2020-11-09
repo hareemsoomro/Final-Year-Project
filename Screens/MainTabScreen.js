@@ -16,6 +16,8 @@ import SixthVisit from './SixthVisit'
 import Booking from './Booking'
 import FAQ from './FAQ'
 import Settings from './SettingScreen'
+import Vaccines from './Vaccines'
+import AddChild from './AddChild'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import FirstVisit from './FirstVisit';
@@ -98,6 +100,8 @@ const HomeStackScreen =({navigation})=>(
        <HomeStack.Screen name="SixthVisit" component={SixthVisit}/>
        <HomeStack.Screen name="Booking" component={Booking}/>
        <HomeStack.Screen name="settings" component={Settings}/>
+       <HomeStack.Screen name="vaccines" component={Vaccines}/>
+       <HomeStack.Screen name="AddChild" component={AddChild}/>
     </HomeStack.Navigator>
 );
 const DetailStackScreen =({navigation})=>(
