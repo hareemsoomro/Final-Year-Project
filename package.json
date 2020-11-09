@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.11.0",
+    "@react-native-community/datetimepicker": "^2.2.2",
     "@react-native-community/masked-view": "0.1.6",
     "@react-native-firebase/app": "^8.4.6",
     "@react-native-firebase/auth": "^9.3.1",
@@ -19,6 +20,7 @@
     "@react-navigation/stack": "^5.2.18",
     "expo": "~37.0.3",
     "expo-font": "~8.1.0",
+    "firebase": "7.9.0",
     "link": "^0.1.5",
     "native-base": "^2.13.13",
     "pod": "^0.9.0",
@@ -37,8 +39,7 @@
     "react-native-screens": "~2.2.0",
     "react-native-swiper": "^1.6.0",
     "react-native-vector-icons": "^6.6.0",
-    "react-native-web": "~0.11.7",
-    "firebase": "7.9.0"
+    "react-native-web": "~0.11.7"
   },
   "devDependencies": {
     "babel-preset-expo": "~8.1.0",

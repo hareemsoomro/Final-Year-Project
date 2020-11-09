@@ -1,56 +1,20 @@
 import React, { Component } from 'react';
-import { StyleSheet,Button, Text, View ,TextInput,Image} from 'react-native';
-import DropDownPicker from 'react-native-dropdown-picker';
-import Swiper from 'react-native-swiper'
+import { StyleSheet, Text, View ,TextInput,Image} from 'react-native';
+import { List,ListItem, Item, Input, Label ,Button,DatePicker} from 'native-base';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 export default class AddChild extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { chosenDate: new Date() };
+    this.setDate = this.setDate.bind(this);
+  }
+  setDate(newDate) {
+    this.setState({ chosenDate: newDate });
+  }
   render(){
   return (
     <View style={styles.container}>
-
-      {/* header */}
-
-      <View>
-            
-      <View style={styles.sliderContainer}> 
-     <Swiper height={150} horizontal={false} autoplay activeDotColor='#98ee99' >
-     <View style={styles.slide} >
-         <Image
-           source={require('../assets/v4.jpg')}
-           resizeMode="cover"
-           style={styles.slidreImage}
-         />
-       </View>
-       <View style={styles.slide} >
-         <Image
-           source={require('../assets/v3.jpg')}
-           resizeMode="cover"
-           style={styles.slidreImage}
-         />
-       </View>
-       <View style={styles.slide} >
-         <Image
-           source={require('../assets/v2.jpg')}
-           resizeMode="cover"
-           style={styles.slidreImage}
-         />
-       </View>
-       <View style={styles.slide} >
-         <Image
-           source={require('../assets/v1.jpg')}
-           resizeMode="cover"
-           style={styles.slidreImage}
-         />
-       </View>
-     </Swiper>
-     </View>
-     <Text>    </Text>
-
-
-
-          
-        </View>
-
         {/* footer */}
 
       <View style={styles.footer}>
@@ -60,23 +24,52 @@ export default class AddChild extends Component {
          {/*============= name============== */}
       <View style={styles.action}>
             <TextInput placeholder="Child Name" style={styles.textInput } />
-            <TextInput placeholder="Guardian Name" style={styles.textInput } />
           </View>
          
           {/*============= date ============== */}
           <View style={styles.action}>
-            <TextInput placeholder=" select age DD/MM/YY" style={styles.textInput } />
+            <DatePicker
+            defaultDate={new Date(2020, 7, 2)}
+            minimumDate={new Date(2018, 1, 1)}
+            maximumDate={new Date(2020, 12, 31)}
+            locale={"en"}
+            timeZoneOffsetInMinutes={undefined}
+            modalTransparent={false}
+            animationType={"fade"}
+            androidMode={"default"}
+            placeHolderText="Select date"
+            textStyle={{ color: "green" }}
+            placeHolderTextStyle={{ color: "#d3d3d3" }}
+            onDateChange={this.setDate}
+            disabled={false}
+            />
           </View>
-          
 
-  
-      <Button color="#66bb6a"
-        title="Add "
-        onPress={() =>(alert("Your booking has been saved. !"))}
-      />
-      <Text>  </Text>
-      <Button color="#66bb6a" title="Go back" onPress={() => navigation.goBack()} />  
-           
+        {/*============= buttons ============== */}
+          <View style={styles.btn}>
+        <Button  rounded success style={styles.mybtn}
+        onPress={()=>this.saveItem()}>
+          <Text>ADD</Text>
+        </Button>
+        <Button rounded danger style={styles.mybtn}
+        onPress={()=>this.removeIt()} >
+          <Text>DELETE ALL</Text>
+        </Button>
+      </View>
+
+           {/*============= list ============== */}
+           <List>
+            <ListItem>
+              <Text>Mohammad Azan </Text>
+            </ListItem>
+            <ListItem>
+              <Text>Aiza Naz</Text>
+            </ListItem>
+            <ListItem>
+              <Text>Dejan Lovren</Text>
+            </ListItem>
+          </List>
+
     </View>
     
     </View>
@@ -114,8 +107,8 @@ textInput: {
 footer: {
   flex: 1,
   backgroundColor: '#fff',
-  borderTopLeftRadius: 30,
-  borderTopRightRadius: 30,
+  //borderTopLeftRadius: 30,
+  // borderTopRightRadius: 30,
   paddingHorizontal: 20,
   paddingVertical: 30
 },
@@ -154,5 +147,14 @@ slidreImage:{
   alignSelf:'center',
   borderRadius:8,
 },
+btn:{
+  flexDirection:'row',
+  padding:30,
+  justifyContent:"space-around",
+},
+mybtn:{
+  width:120,
+  justifyContent:"center"}
+
 
   })
